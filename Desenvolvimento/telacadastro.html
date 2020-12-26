@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="´pt-br">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tela de Cadastro</title>
+    <link href="css/telacadastro.css" rel="stylesheet" type="text/css" />
+</head>
+   
+
+        <header class="menu-bg">
+                <div class="navbar">
+                    <h1 class="color-text">Seja Bem-vindo</h1>
+                </div>
+                <div class="navbar">
+                    <h2 class="color-text"> Informações Pessoais </h2>
+                </div>
+        </header>
+      
+      
+
+        <div class="central">
+
+                <div class="cadastro_one">
+
+                    <div class="campo">
+                        <p>Nome</p>
+                        <input class="btn" id="nome" name="nome" required="required" type="text" placeholder="Nome Completo" />
+                    </div>
+                    <div class="campo">
+                        <p>Possui um nome Social ?</p>
+                        <input class="btn" id="nome_social" name="nome_social" required="required" type="text" placeholder="Nome Social" />
+                    </div>
+                    <div class="campo">
+                        <p>CPF</p>
+                        <input class="btn" id="cpf" name="cpf" required="required" type="number" placeholder="Ex.: 000.000.000-00" />
+                    </div>
+                    <div class="campo">
+                        <p>telefone</p>
+                        <input class="btn" id="telefone" name="telefone" required="required" type="tel" placeholder="Ex.: (00) 0000-0000" />
+                    </div>
+                    <div class="campo">
+                        <p>CEP</p>
+                        <input class="btn" id="cep" name="cep" required="required" type="number" class="form-control cep-mask" placeholder="Ex.: 00000-000" />
+                    </div>
+                    <div class="campo">
+                        <p>Endereço</p>
+                        <input class="btn" id="endereco" name="endereco" required="required" type="text" placeholder="Endereço" />
+                    </div>
+
+                </div>
+                <div class="cadastro_two">
+                    <div class="campo">
+                        <p>Naturalidade</p>
+                        <select class="btn select" id="naturalidade" name="naturalidade">
+                        <option value="naturalidade">Naturalidade</option>
+                        <option value="asasul">Asa Sul</option>
+                        <option value=" asanorte">Asa Norte</option>
+                        <option value="outro">outro</option>
+                    </select>
+
+                    </div>
+                    <div class="campo">
+                        <p>RG</p>
+                        <input class="btn" id="rg" name="rg" required="required" type="number" placeholder="Ex.: 0.000.000" />
+
+                    </div>
+                    <div class="campo">
+                        <p>Data Nascimento</p>
+                        <input type="date" class="btn" placeholder="   Ex.: dd/mm/aaaa" data-mask="00/00/0000" maxlength="10" autocomplete="off" id="data" name="data" required="required">
+                    </div>
+                    <div class="campo">
+                        <p>Senha</p>
+                        <input class="btn" id="senha" name="senha" required="required" type="password" placeholder="Senha" />
+                    </div>
+                    <div class="campo">
+                        <p>Confirmação senha:</p>
+                        <input class="btn" id="senha" name="senha" required="required" type="password" placeholder="Confirmar senha" />
+                    </div>
+                    <div class="campo">
+                        <p>Opção de Usuário</p>
+                        <select class="btn select" id="cars" name="cars">
+                            <option value="tipousuario">Tipo de Usuário</option>
+                            <option value="Professor">Professor</option>
+                            <option value=" Aluno">Aluno</option>
+                            <option value="Administrador">Administrador</option>
+                        </select>
+                    </div>
+                    </br>
+                    </br>
+                    <div class="Imput ">
+                        <input class="submit-env" type="button" value="Enviar" />
+                   
+                    </div>
+                    <div class="Imput ">
+                        <input class="submit-cancel" type="button" value="Cancelar"/>
+                    </div>
+                   
+
+                </div>
+
+            </div>
+
+            <section class="style-section-one">
+                <h2 class="stylesH2">Preenchimento obrigatório</h2>
+                    <div class="column-flex">
+                        <div class="column">
+                            <p>Qual sua média salarial?*</p>
+                                <input type="radio" id="sal1" name="qms" value="sal1">
+                                <label for="sal1">Até 1 salários minímo</label><br>
+                                <input type="radio" id="sal23" name="qms" value="sal23">
+                                <label for="sal23">De 2 à 3 salários minímos</label><br>
+                                <input type="radio" id="sal34" name="qms" value="sal34">
+                                <label for="sal23">De 3 a 4 Salario Minimos</label><br>
+                                <input type="radio" id="sal34" name="qms" value="sal34">
+                                <label for="sal23">  A cima de 5 Salarios Minimos</label><br>
+                                
+                        </div>
+                        <div class="column">
+                            <p>Qual sua moradia?* *</p>
+                            <input type="radio" id="adm1" name="qsm" value="adm1">
+                            <label for="adm1">Casa própria</label><br>
+                            <input type="radio" id="adm3" name="qsm" value="adm3">
+                            <label for="adm3">Casa Alugada</label><br>    
+                            <input type="radio" id="adm3" name="qsm" value="adm3">
+                            <label for="adm3">Casa financiada</label><br> 
+                            <input type="radio" id="adm3" name="qsm" value="adm3">
+                            <label for="adm3">Mora na casa de filhos / parentes</label><br>   
+                            <input type="radio" id="adm3" name="qsm" value="adm3">
+                            <label for="adm3">ILPI’S (ASILOS)</label><br>       
+                        </div>
+                    </div>
+                        <div class="column-flex">     
+                            <div class="column">
+                                <p>Sobre as proprias finanças. *</p>
+                                    <input type="radio" id="sal1" name="spf" value="sal1">
+                                    <label for="sal1">Administrar as proprias finanças</label><br>
+                                    <input type="radio" id="sal23" name="spf" value="sal23">
+                                    <label for="sal23">Finanças administrada por terceiros.</label><br>
+                            </div>
+                            <div class="column">
+                                <p>Em caso de emergência avisar: *</p>
+                                <p>nome:</p>
+                                <input class="btn" id="nome" name="nome_sos" required="required" type="text" placeholder="Nome Completo" />
+                                <p>telefone:</p>
+                                <input class="btn" id="telefone" name="telefone_sos" required="required" type="tel" placeholder="Ex.: (00) 0000-0000" />
+  
+                            </div>
+                        </div>
+                        <div class="column-flex">
+                    
+                            <div class="column">
+                                <p>Assinale o tipo de locomoção que costuma utilizar. *</p>
+                                    <input type="radio" id="sal1" name="transporte" value="sal1">
+                                    <label for="sal1">Carro Próprio.</label><br>
+                                    <input type="radio" id="sal23" name="transporte" value="sal23">
+                                    <label for="sal23">Doenças Cardiacas</label><br>
+                                    <input type="radio" id="sal34" name="transporte" value="sal34">
+                                    <label for="sal23">Carro Conduzido por Familiares</label><br>
+                                    <input type="radio" id="sal34" name="transporte" value="sal34">
+                                    <label for="sal23">Moto</label><br>
+                                    <input type="radio" id="sal34" name="transporte" value="sal34">
+                                    <label for="sal23">Transporte Público</label><br>
+                                    <input type="radio" id="sal34" name="transporte" value="sal34">
+                                    <label for="sal23">Bicicleta</label><br>
+                                    <input type="radio" id="sal34" name="transporte" value="sal34">
+                                    <label for="sal23">Taxi / Uber</label><br>
+                                    <input type="radio" id="sal34" name="transporte" value="sal34">
+                                    <label for="sal23">Outros</label><br>
+                                    <input class="btn" id="nome" name="resposta" required="required" type="text" placeholder="sua resposta" />
+                                    
+                                    
+                            </div>
+                            <div class="column">
+                            </div>
+                        </div>
+                <h2 class="stylesH2">Escolaridade*</h2>
+                <div class="column-flex">
+                    <div class="column">
+                   
+                            <input type="radio" id="sal1" name="escolaridade" value="sal1">
+                            <label for="sal1">Analfabeto</label><br>
+                            <input type="radio" id="sal23" name="escolaridade" value="sal23">
+                            <label for="sal23">Saber ler e Escrever</label><br>
+                            <input type="radio" id="sal34" name="escolaridade" value="sal34">
+                            <label for="sal23">Ensino Fundamental | (1° ao 4° Ano)</label><br>
+                            <input type="radio" id="sal34" name="escolaridade" value="sal34">
+                            <label for="sal23">Ensino Fundamental || (5° ao 9° Ano)</label><br>
+                            <input type="radio" id="sal34" name="escolaridade" value="sal34">
+                            <label for="sal23">Graduação</label><br>
+                            <input type="radio" id="sal34" name="escolaridade" value="sal34">
+                            <label for="sal23">Pós Graduação</label><br>
+                            
+                    </div>
+                    <div class="column">
+                    </div>
+                </div>
+
+
+                <h2 class="stylesH2">Socio Econômico *</h2>
+                <div class="column-flex">
+                    <div class="column">
+                        <p>Como você classifica a sua situação econômica ? *</p>
+                        <input type="radio" id="sal1" name="economia" value="sal1">
+                        <label for="sal1">Péssima</label><br>
+                        <input type="radio" id="sal23" name="economia" value="sal23">
+                        <label for="sal23">Ruim</label><br>
+                        <input type="radio" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Regular</label><br>
+                        <input type="radio" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Boa</label><br>
+                        <input type="radio" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Ótima</label><br>
+                            
+                    </div>
+                    <div class="column">
+                        <p>É aposentado ? *</p>
+                        <input type="radio" id="sal1" name="aposentado" value="sal1">
+                        <label for="sal1">Sim</label><br>
+                        <input type="radio" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Não</label><br>
+                    </div>
+                </div>
+
+
+                <div class="column-flex">
+                    <div class="column">
+                        <p>Esta trabalhando atualmente ? *</p>
+                        <input type="radio" id="sal1" name="trabalho_a" value="sal1">
+                        <label for="sal1">Sim</label><br>
+                        <input type="radio" id="sal23" name="trabalho_a" value="sal23">
+                        <label for="sal23">Não</label><br>
+                    </div>
+                    <div class="column">
+                        <p>Ultima Profissão registrada na carteira de trabalho e previdencia social - CTPS ? *</p>
+                        <p>Esta trabalhando atualmente ? *</p>
+                        <input class="btn" id="nome" name="nome" required="required" type="" placeholder="sua resposta" />
+
+                    </div>
+                </div>
+                <div class="column-flex">
+                    <div class="column">
+                        <p>É beneficiario(A) de Algum programa de governo ? *</p>
+                        <input type="radio" id="sal1" name="economia" value="sal1">
+                        <label for="sal1">Bolsa Familia</label><br>
+                        <input type="radio" id="sal23" name="economia" value="sal23">
+                        <label for="sal23">Benefício de Prestação Continuada</label><br>
+                        <input type="radio" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">DF sem miséria</label><br>
+                        <input type="radio" id="sal34" name="transporte" value="sal34">
+                        <label for="sal23">Outros</label><br>
+                        <input class="btn" id="nome" name="resposta" required="required" type="text" placeholder="sua resposta" />
+                            
+                    </div>
+                    <div class="column">
+                        <p>É atendido(a) em alguma unidade de atendimento?*</p>
+                        <input type="radio" id="sal1" name="economia" value="sal1">
+                        <label for="sal1">Cras</label><br>
+                        <input type="radio" id="sal23" name="economia" value="sal23">
+                        <label for="sal23">Creas</label><br>
+                        <input type="radio" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Posto de Saúde</label><br>
+                        <input type="radio" id="sal34" name="transporte" value="sal34">
+                        <label for="sal23">Outros</label><br>
+                        <input class="btn" id="nome" name="resposta" required="required" type="text" placeholder="sua resposta" />
+                            
+                    </div>
+                </div>
+
+
+                <h2 class="stylesH2">Avaliação física *</h2>
+                <div class="column-flex">
+                    <div class="column">
+                        <p>Sobre Acessibilidade *</p>
+                        <input type="checkbox" id="sal1" name="economia" value="sal1">
+                        <label for="sal1">Se locomove  sem dificuldade</label><br>
+                        <input type="checkbox" id="sal23" name="economia" value="sal23">
+                        <label for="sal23">Se locomove  com dificuldade</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Se locomove  com o uso de auxiliares de marcha (Andador, Muleta)</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Deficiente auditivo</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Deficiente de acuidade auditiva</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Deficiente Intelectual</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Deficiente visual</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Deficiente de acuidade visual</label><br>  
+                    </div>
+                    <div class="column">
+                        <p>Patologia Pré Existentes *</p>
+                        <input type="checkbox" id="sal1" name="aposentado" value="sal1">
+                        <label for="sal1">Diabetes</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças  cardiacas </label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Hipertensão arterial</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">DPOC</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Parkison</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Alzheimer</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Osteoporose</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças de Derme</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Alergias</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças de Derme</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Depressão</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Osteoporose</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças Urológicas</label><br>
+                        <input type="checkbox" id="sal34" name="transporte" value="sal34">
+                        <label for="sal23">Outros</label><br>
+                        <input class="btn" id="nome" name="resposta" required="required" type="text" placeholder="sua resposta" />
+                    </div>
+                </div>
+
+                <h2 class="stylesH2">Autonomia e Independência *</h2>
+                <div class="column-flex">
+                    <div class="column">
+                        <input type="checkbox" id="sal1" name="economia" value="sal1">
+                        <label for="sal1">Depende de cuidadores</label><br>
+                        <input type="checkbox" id="sal23" name="economia" value="sal23">
+                        <label for="checkbox">Depende de acompanhamento</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="checkbox">Independente</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Limpa a casa</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Cozinha</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Cuida dos netos / Parentes</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Deficiente visual</label><br>
+                        <input type="checkbox" id="sal34" name="economia" value="sal34">
+                        <label for="sal23">Deficiente de acuidade visual</label><br>  
+                    </div>
+                    <div class="column">
+                        <p>Patologia Pré Existentes *</p>
+                        <input type="checkbox" id="sal1" name="aposentado" value="sal1">
+                        <label for="sal1">Diabetes</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças  cardiacas </label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Hipertensão arterial</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">DPOC</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Parkison</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Alzheimer</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Osteoporose</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças de Derme</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Alergias</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças de Derme</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Depressão</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Osteoporose</label><br>
+                        <input type="checkbox" id="sal23" name="aposentado" value="sal23">
+                        <label for="sal23">Doenças Urológicas</label><br>
+                        <input type="checkbox" id="sal34" name="transporte" value="sal34">
+                        <label for="sal23">Outros</label><br>
+                        <input class="btn" id="nome" name="resposta" required="required" type="text" placeholder="sua resposta" />
+                    </div>
+                </div>
+
+                <div class="button-aluno">
+                    
+                    <div class="input-env ">
+                        <input class="submit-cancel-aluno" type="button" value="Cancelar"/>
+                    </div>
+                    <div class="input-env env-aluno">
+                        <input class="submit-env-aluno" type="button" value="Enviar" />    
+                    </div>
+                </div>
+            </section>
+
+           
+            <footer class="footer">
+                <div>
+                    <h2>Sejus - DF</h2>
+                </div>
+            </footer>
+
+
+
+
+       
+
+    
+
+
+
+
+<body>
+
+</body>
+
+</html>

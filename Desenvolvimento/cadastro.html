@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="´pt-br">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<div class="total">
+    <div class="container">
+
+        <div class="navbar">
+            <h1>Seja Bem-Vindo</h1>
+            <h2>Tela de Cadastro</h2>
+        </div>
+        <div class="infoP">
+            <h2> Preenchimento Obrigatório </h2>
+        </div>
+        <div class="central">
+
+            <div class="cadastro_threee">
+                <br>
+                <div class="campo">
+                    <p>Município</p>
+                    <select class=" btn" id="cars" name="cars">
+                            <option value="tipousuario">Município</option>
+                            <option value="aguasclaras">Águas Claras</option>
+                             <option value=" guara">Guará</option>
+                            <option value="taguatinga">Taguatinga</option>
+                            </select>
+                </div>
+                <div class="campo">
+                    <p>Em qual curso deseja se matricular?</p>
+                    <select class=" btn" id="cars" name="cars">
+                             <option value="cursos">Cursos</option>
+                             <option value="basico">Básico</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value=" avancado">Avançado</option>
+                            </select>
+                </div>
+
+                <div class="campo">
+                    <p>Qual periodo deseja cursar?</p>
+                    <select class=" btn" id="cars" name="cars">
+                             <option value="periodo">Período</option>
+                             <option value="matutino">Matutino</option>
+                            <option value="vespertino">Vespertino</option>
+                            <option value=" noturno">Noturno</option>
+                            </select>
+                    <br>
+                    <br>
+
+                </div>
+
+                <div class="infoO">
+                    <h2>Informações Obrigatorias</h2>
+                </div>
+
+                <div class="campo">
+                    <p>Qual sua média salarial?</p>
+                    </br>
+                    <input type="radio" id="sal1" name="male" value="sal1">
+                    <label for="sal1">Até 1 salários minímo</label><br>
+                    <input type="radio" id="sal23" name="male" value="sal23">
+                    <label for="sal23">De 2 à 3 salários minímos</label><br>
+                    <input type="radio" id="sal34" name="male" value="sal34">
+                    <label for="sal34">De 3 à 4 salários minímos</label><br>
+                    <input type="radio" id="sal5" name="male" value="sal5">
+                    <label for="sal5">Acima de 5 salários minímos</label><br>
+                </div>
+                </br>
+                </br>
+
+                <div class="campo">
+                    <p>Sobre as Próprias finanças: </p>
+                    </br>
+                    <input type="radio" id="adm1" name="male" value="adm1">
+                    <label for="adm1">Administra as próprias finanças</label><br>
+                    <input type="radio" id="adm3" name="male" value="adm3">
+                    <label for="adm3">Finaças administradas por terceiros</label><br>
+                </div>
+                </br>
+                </br>
+
+                <div class="campo">
+                    <p>Qual tipo de locomoção costuma utilizar?</p>
+                    </br>
+                    <input type="radio" id="cp" name="male" value="cp">
+                    <label for="cp">Carro próprio </label><br>
+                    <input type="radio" id="cf" name="male" value="cf">
+                    <label for="cf">Carro conduzido por familiares</label><br>
+                    <input type="radio" id="mt" name="male" value="mt">
+                    <label for="mt">Moto</label><br>
+                    <input type="radio" id="tp" name="male" value="tp">
+                    <label for="tp">Transporte público</label><br>
+                    <input type="radio" id="bc" name="male" value="bc">
+                    <label for="bc">Bicicleta</label><br>
+                    <input type="radio" id="mt" name="male" value="mt">
+                    <label for="mt">Moto</label><br>
+                    <input type="radio" id="tu" name="male" value="tu">
+                    <label for="tu">Táxi/Uber</label><br>
+                    <input type="radio" id="ou" name="male" value="ou">
+                    <label for="ou">Outros</label><br>
+                </div>
+                </br>
+                </br>
+
+                <div class="campo">
+                    <p>Sua moradia é...?</p>
+                    </br>
+                    <input type="radio" id="cap" name="male" value="cap">
+                    <label for="cap">Casa própria </label><br>
+                    <input type="radio" id="caa" name="male" value="caa">
+                    <label for="caa">Casa alugada</label><br>
+                    <input type="radio" id="caf" name="male" value="caf">
+                    <label for="caf">Casa finaciada</label><br>
+                    <input type="radio" id="cfp" name="male" value="cfp">
+                    <label for="cfp">Casa dos filho/parentes</label><br>
+                    <input type="radio" id="ilpts" name="male" value="ilpts">
+                    <label for="ilpts">ILPTS (asilos) </label><br>
+                </div>
+                </br>
+                </br>
+
+                <div class="campo">
+                    <h2>Em caso de Emergência avisar: </h2><br>
+                    <p>Nome da Pessoa: </p>
+                    <input class="btn" id="nome" name="nome" required="required" type="password" placeholder="   Nome Contato de Emergência" /></br>
+                    <br>
+                    <p>Número do contato de emergência: </p>
+                    <input class="btn" id="telefone" name="telefone" required="required" type="tel" placeholder="   Ex.: (00) 0000-0000" />
+                </div>
+                </br>
+                </br>
+
+                <div class="infoe">
+                    <div class="campo">
+                        <h2>Escolaridade</h2>
+
+                    </div>
+                    <div class="campo">
+                        <p>Sua escolaridade é...?</p>
+                        </br>
+
+                        <input type="radio" id="an" name="male" value="an">
+                        <label for="an">Analfabeto </label><br>
+                        <input type="radio" id="sle" name="male" value="sle">
+                        <label for="sle">Sabe ler e escrever</label><br>
+                        <input type="radio" id="efii" name="male" value="efii">
+                        <label for="efii">Ensino Fundamental I (1º ao 4º ano)</label><br>
+                        <input type="radio" id="em" name="male" value="em">
+                        <label for="em">Ensino Médio (1º ao 3º ano)</label><br>
+                        <input type="radio" id="gra" name="male" value="gra">
+                        <label for="gra">Graduação </label><br>
+                        <input type="radio" id="pgra" name="male" value="pgra">
+                        <label for="pgra">Pós-Graduação </label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                </div>
+
+                <div class="cadastro_for">
+
+                    <div class="infosce">
+                        <h2>Socio Econômico</h2>
+                    </div>
+
+                    <div class="campo">
+                        <p>Como você classifica a sua situação econômica?</p>
+                        </br>
+
+                        <input type="radio" id="pes" name="male" value="pes">
+                        <label for="pes">Péssima </label><br>
+                        <input type="radio" id="rui" name="male" value="rui">
+                        <label for="rui">Ruimr</label><br>
+                        <input type="radio" id="reg" name="male" value="reg">
+                        <label for="reg">Regular</label><br>
+                        <input type="radio" id="boa" name="male" value="boa">
+                        <label for="boa">Boa</label><br>
+                        <input type="radio" id="oti" name="male" value="oti">
+                        <label for="oti">Ótima </label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="campo">
+                        <p>Está trabalhando atualmente?</p>
+                        </br>
+
+                        <input type="radio" id="s" name="male" value="s">
+                        <label for="s">Sim </label><br>
+                        <input type="radio" id="n" name="male" value="n">
+                        <label for="n">Não</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="campo">
+                        <p>É beneficiário (a) de algum programa do governo?</p>
+                        </br>
+
+                        <input type="radio" id="bf" name="male" value="bf">
+                        <label for="bf">Bolsa familia </label><br>
+                        <input type="radio" id="bpc" name="male" value="bpc">
+                        <label for="bpc">Beneficio de prestação continuada</label><br>
+                        <input type="radio" id="dfsm" name="male" value="dfsm">
+                        <label for="dfsm">DF sem miséria </label><br>
+                        <input type="radio" id="out" name="male" value="out">
+                        <label for="out">Outros</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="campo">
+                        <p>É aposentado?</p>
+                        </br>
+
+                        <input type="radio" id="si" name="male" value="si">
+                        <label for="si">Sim </label><br>
+                        <input type="radio" id="na" name="male" value="na">
+                        <label for="na">Não</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="campo">
+                        <p>Ultima profissão registrada na carteira de trabalho e previdência social</p>
+                        <input class="btn" id="ultimaprof" name="ultimaprof" required="required" type="text" placeholder="   Ultima Profissão" />
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="campo">
+                        <p>É atendido(a) em alguma unidade de atendimento?</p>
+                        </br>
+
+                        <input type="radio" id="Cras" name="male" value="Cras">
+                        <label for="Cras">Cras </label><br>
+                        <input type="radio" id="Creas" name="male" value="Creas">
+                        <label for="Creas">Creas</label><br>
+                        <input type="radio" id="posts" name="male" value="posts">
+                        <label for="posts">Posto de Saúde </label><br>
+                        <input type="radio" id="outr" name="male" value="outr">
+                        <label for="outr">Outros</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="infoaf">
+                        <h2>Avaliação Física</h2>
+                    </div>
+                    <div class="campo">
+                        <p>Sobre acessibilidade: </p>
+                        </br>
+
+                        <input type="radio" id="slcd" name="male" value="slcd">
+                        <label for="slcd">Se locomove com dificuldade </label><br>
+                        <input type="radio" id="slsd" name="male" value="slsd">
+                        <label for="slsd">Se locomove sem dificuldade</label><br>
+                        <input type="radio" id="slcuam" name="male" value="slcuam">
+                        <label for="slcuam">Se locomove com o uso de auxiliares de marcha (andador, muleta) </label><br>
+                        <input type="radio" id="cadei" name="male" value="cadei">
+                        <label for="cadei">Cadeirante</label><br>
+                        <input type="radio" id="defiaud" name="male" value="defiaud">
+                        <label for="defiaud"> Deficiente Audutivo </label><br>
+                        <input type="radio" id="defiacuaud" name="male" value="defiacuaud">
+                        <label for="defiacuaud">Deficiente de acuidade auditiva</label><br>
+                        <input type="radio" id="defint" name="male" value="defint">
+                        <label for="defint">Deficiente intelectual</label><br>
+                        <input type="radio" id="defivis" name="male" value="defivis">
+                        <label for="defivis">Deficiente visual </label><br>
+                        <input type="radio" id="defiacuvis" name="male" value="defiacuvis">
+                        <label for="defiacuvis">Deficiente de acuidade visual</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="campo">
+                        <p>Patológia Pré-existente </p>
+                        </br>
+
+                        <input type="radio" id="diab" name="diab" value="diab">
+                        <label for="diab">Diabetes </label><br>
+                        <input type="radio" id="doecar" name="doecar" value="doecar">
+                        <label for="doecar">Doença cardiaca</label><br>
+                        <input type="radio" id="hiperart" name="hiperart" value="hiperart">
+                        <label for="hiperart">Hipertensão Arterial </label><br>
+                        <input type="radio" id="dpoc" name="dpoc" value="dpoc">
+                        <label for="dpoc">DPOC</label><br>
+                        <input type="radio" id="park" name="park" value="park">
+                        <label for="park"> Parkinson </label><br>
+                        <input type="radio" id="alzh" name="alzh" value="alzh">
+                        <label for="alzh">Alzheimer</label><br>
+                        <input type="radio" id="osteo" name="osteo" value="osteo">
+                        <label for="osteo">Osteoporose</label><br>
+                        <input type="radio" id="doeder" name="doeder" value="defidoedervis">
+                        <label for="doeder">Doenças de Derme</label><br>
+                        <input type="radio" id="alergia" name="alergia" value="alergia">
+                        <label for="alergia">Alergias</label><br>
+                        <input type="radio" id="depre" name="male" value="depre">
+                        <label for="depre">Depressão</label><br>
+                        <input type="radio" id="doeuro" name="doeuro" value="doeuro">
+                        <label for="doeuro">Doenças urologicas</label><br>
+                        <input type="radio" id="outra" name="outra" value="outra">
+                        <label for="outra">Outras</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+
+                    <div class="infoauteind">
+                        <h2>Autonômia e Independência</h2>
+                    </div>
+
+                    <div class="campo">
+                        <p>Sua autonômia e independência é: </p>
+                        </br>
+
+                        <input type="radio" id="depcui" name="depcui" value="depcui">
+                        <label for="depcui">Depende de cuidadores </label><br>
+                        <input type="radio" id="depacom" name="depacom" value="depacom">
+                        <label for="depacom">Depende de acompanhamento</label><br>
+                        <input type="radio" id="indep" name="indep" value="indep">
+                        <label for="indep">Independente </label><br>
+                        <input type="radio" id="limpcas" name="limpcas" value="limpcas">
+                        <label for="limpcas">Limpa a casa</label><br>
+                        <input type="radio" id="cozinha" name="cozinha" value="cozinha">
+                        <label for="cozinha"> Cozinha </label><br>
+                        <input type="radio" id="cuidnepa" name="cuidnepa" value="cuidnepa">
+                        <label for="cuidnepa">Cuida dos netos/parentes</label><br>
+                        <input type="radio" id="napratifi" name="napratifi" value="napratifi">
+                        <label for="napratifi">Não pratica atividade fisíca</label><br>
+                        <input type="radio" id="caminhada" name="caminhada" value="caminhada">
+                        <label for="caminhada">Caminhada</label><br>
+                        <input type="radio" id="acad" name="acad" value="acad">
+                        <label for="acad">Acadêmia</label><br>
+                        <input type="radio" id="hablei" name="hablei" value="hablei">
+                        <label for="hablei">Hábito de Leitura</label><br>
+                        <input type="radio" id="jogos" name="jogos" value="jogos">
+                        <label for="jogos">Jogos</label><br>
+                        <input type="radio" id="baifes" name="baifes" value="baifes">
+                        <label for="baifes">Bailes/Festas</label><br>
+                        <input type="radio" id="shop" name="shop" value="shop">
+                        <label for="shop">Shopping</label><br>
+                        <input type="radio" id="vidseat" name="vidseat" value="vidseat">
+                        <label for="vidseat">Vida sexual ativa</label><br>
+                        <input type="radio" id="vidseinat" name="vidseinat" value="vidseinat">
+                        <label for="vidseinat">Vida sexual inativa</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="campo">
+                        <p>Como ficou sabendo do curso?</p>
+                        </br>
+
+                        <input type="radio" id="demespo" name="male" value="demespo">
+                        <label for="demespo">Demanda espontânea </label><br>
+                        <input type="radio" id="encalo" name="male" value="encalo">
+                        <label for="encalo">Encaminhamento por algum orgão</label><br>
+                        <input type="radio" id="infocomu" name="infocomu" value="infocomu">
+                        <label for="infocomu">Informação na comunidade</label><br>
+                        <input type="radio" id="midia" name="male" value="midia">
+                        <label for="midia">Mídias</label><br>
+                        <input type="radio" id="outros" name="male" value="outros">
+                        <label for="outros">Outros</label><br>
+                    </div>
+                    </br>
+                    </br>
+
+                    <div class="Imput ">
+                        <input class="submit" type="button" value="Enviar " />
+                        <input class="submit" type="button" value="Cancelar " />
+                    </div>
+                    </br>
+                    </br>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <body>
+
+        </body>
+
+</html>

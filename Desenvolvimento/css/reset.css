@@ -1,0 +1,129 @@
+/*RESET
+-----------------------------------------*/
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+ height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50
+}
+
+:root,
+.section{ /*Agrupei a sessão na row
+    -----------------------------------------*/
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    transition: all 300ms ease-in-out; /* transição de quando eu passar o mouse em cima da letra em laranja ele ficar suave-*/
+    -webkit-transition: all 300ms ease-in-out;
+}
+a:hover{
+    color: #f47933;
+}
+
+img{
+    max-width: 100%;
+    border: 0;
+}
+
+input,
+button,
+textarea{
+    border: 0;
+}
+
+/*GERAIS
+-----------------------------------------*/
+.font-zero{
+    font-size: 0%;
+}
+
+.row,
+section{
+    float: left;
+    width: 100%;
+}
+
+.section{
+    padding: 72px;
+}
+
+.section-header{   /*Formatando os textos  para alinhar das sessões da sessão -----------------------------------------*/
+text-align: center;  
+margin-bottom: 40px;
+font-size: 1.2rem;
+}
+
+.section-header .content{
+    max-width: 800px;
+    
+}
+
+.section-header h1{   /*Formatando os textos da fonte das sessões   -----------------------------------------*/
+font-weight: normal;  /*Formatando as fonte das sessões   -----------------------------------------*/
+font-family: 'Oswald' , sans-serif;  
+font-size: 2rem;
+color: #01c0b5;
+text-transform: uppercase; /*Deixar o texto em caixa alta  ----*/
+position: relative;
+padding-bottom: 10px;
+margin-bottom: 20px;
+}
+
+.section-header h1:after{   /*Formatando a barrinha(borda) abaixo do nome Agency H1 ---*/
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    max-width: 480px; /* maximo tamanho da barrinha quando passar do maximo ele vai ficar 100% Agency H1 ---*/
+    background: #01c0b5;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    }
+     .section-header h1:before{   /*Formatando a barrinha(borda de baixo) abaixo do nome Agency H1 ---*/
+     content: "";
+     position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -12px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #01c0b5;
+            
+}
+ .section-header h1 span{  
+ position: relative;
+                        
+}
+
+.section-header h1 span:before{  
+ content: "";
+position: absolute;    /* Como passei absolute no H1 Span tenho que passar relative ---*/
+background: #01c0b5;
+height: -9px;
+left: 0;
+width: 100%;
+height: 2px;
+                
+}
+ /* FIM Formatando a barrinha(borda de baixo) abaixo do nome Agency H1 ---*/
+    
+
+.content{
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}

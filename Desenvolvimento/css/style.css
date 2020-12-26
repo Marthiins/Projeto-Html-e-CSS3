@@ -1,0 +1,1409 @@
+
+/* MODAL DIALOG
+==========================================*/
+.dialog{ 
+display: none;
+position: fixed;
+background: rgba(255, 255,255, .96);
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+z-index: 99;
+padding: 50px 0 20px 0;
+}
+.dialog-close{
+    background: transparent;
+    color: #f47933;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.dialog-close i{
+    font-size: 2rem;
+    position: relative;
+    top: 4px;  
+}
+.dialog-body{
+    display: none;
+    overflow-y:auto ;
+    width: 90%;
+    max-width: 870px;
+    max-height: 100%; /*Poder ver todo o conteudo da modal */
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.dialog-body-header{
+    font-family: 'Oswald' , sans-serif;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #01c0b5;
+    line-height: 1.2;
+}
+
+.dialog-body-header strong{
+   font-size: 2rem;
+   font-weight: 400;
+}
+
+.dialog-body-header span{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #01c0b5;
+ }
+
+ .dialog-colunas .row{
+     margin-bottom: 20px;
+ }
+
+ .dialog-colunas .row p{
+    margin-bottom: 10px;
+}
+.dialog-colunas-header{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #01c0b5;
+}
+.dialog-colunas-header span{
+    font-family: 'Oswald' , sans-serif;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: #01c0b5;
+    position: relative; /* Coloquei position relative para fazer a borda de baixo */
+}
+.dialog-colunas-header span:after{
+    content: "";
+    background: #01c0b5;
+    position: absolute; 
+    left: 0;
+    bottom: -5px; /* Como passei padding-botton 5px na principal tenho que passar aqui*/
+    height: 2px;
+    width: 100%;
+}
+/* HEADER
+==========================================*/
+.header{
+   border-top: 6px solid #2c3e50
+}
+
+/* nav-toggle */
+#nav-toggle{
+    border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    position: fixed;
+    z-index: 15;
+    display: none;
+    background: #2c3e50;
+    padding: 15px;
+    top: 0;
+    right: 0;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+#nav-toggle span{
+    border-radius: 1px;
+    height: 2px;
+    width: 30px;
+    display: block;
+    background: #fff;
+    -webkit-border-radius: 1px;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0)
+}
+#nav-toggle span:nth-child(2){
+    margin: 6px 0;
+}
+#nav-toggle{
+    border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    position: fixed;
+    z-index: 15;
+    display: none;
+    background: #2c3e50;
+    padding: 15px;
+    top: 0;
+    right: 0;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+#nav-toggle span{
+    border-radius: 1px;
+    height: 2px;
+    width: 30px;
+    display: block;
+    background: #fff;
+    -webkit-border-radius: 1px;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0)
+}
+#nav-toggle span:nth-child(2){
+    margin: 6px 0;
+}
+#nav-toggle.active span:nth-child(1){
+    transform: rotate(45deg) translate3d(6px,6px,0);
+    -webkit-transform: rotate(45deg) translate3d(6px,6px,0);
+}
+#nav-toggle.active span:nth-child(2){
+    opacity: 0;
+}
+#nav-toggle.active span:nth-child(3){
+    transform: rotate(-45deg) translate3d(6px,-5px,0);
+    -webkit-transform: rotate(-45deg) translate3d(6px,-5px,0);
+}
+#nav-toggle.active span:nth-child(2){
+    opacity: 0;
+}
+#nav-toggle.active span:nth-child(3){
+    transform: rotate(-45deg) translate3d(6px,-5px,0);
+    -webkit-transform: rotate(-45deg) translate3d(6px,-5px,0);
+}
+
+/* Header logo */
+.header-logo{
+    width: 180px;
+    padding: 22px 0;
+    float: left;
+}
+
+/* header menu */
+.header-nav{
+    float: left;
+    padding: 25px 0;
+}
+.header-nav ul li{
+    display: inline-block;
+    margin: 0 3px;
+    position: relative; 
+}
+.header-nav ul li a{  
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.header-nav ul li a:hover{
+  color: #f47933;
+
+}
+.header-nav ul li a.active{
+  color: #f47933;
+
+}
+
+/* search */
+.header-search{
+    position: relative;
+    float: right;
+    margin: 18px 0;
+}
+.header-search input::-webkit-input-placeholder {/* Chrome/Opera/Safira */
+    color: #fff;   
+}
+.header-search input:-moz-placeholder {/* Mozilla FireFox 4 to 18 */
+    color: #fff;
+    opacity: 1;
+}
+.header-search input::-moz-placeholder {/* FireFox 19+ */
+    color: #fff;
+    opacity: 1;
+}
+.header-search input:-ms-input-placeholder {/* IE 10+ */
+    color: #fff;
+}
+.header-search input::-ms-inputplaceholder {/* Microsft Edge */
+    color: #fff;
+}
+.header-search input::placeholder {/* Browsers Modernos. */
+    color: #fff;
+}
+.header-search input{
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    background: #01c0b5;
+    padding: 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.header-search button{
+    position: absolute;
+    top: 0;
+    right: 8px;
+    color: #fff;
+    font-size: 1.5rem;
+    background: transparent;
+    transform: translateY(-50);
+    -webkit-transform: translateY(-50);
+}
+
+/* redes header */
+.header-redes{
+    text-align: center;
+    margin: 20px 0;
+    display: none;
+}
+.header-redes a{
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+/* Agência ===========================================================*/
+.agencia{
+background: #f5f5f5;
+padding: 50px 0 ; /* espaçamento cima e baixo 50, dos lados 0*/
+
+}
+.agencia-title{
+   text-transform: uppercase; 
+   font-size: 1.875rem; /* para trasnformar px em rem pega o tamanho e divide por 16 */
+}
+.agencia-title strong{
+    color: #01c0b5;
+    text-transform: uppercase; 
+    text-align: center;
+    font-size: 1.375rem; 
+ }
+
+ .agencia-itens{
+     margin-top: 30px;
+     text-align: center;
+ }
+
+ .agencia-itens-icon{
+     background: #01c0b5 ;
+     color: #fff;
+     width: 100%;
+     padding: 20px;
+     font-size: 6rem;
+     position: relative;
+ }
+
+ .agencia-itens-icon:before{   /*Formatando a barrinha1 ---*/
+    content: "";
+    position: absolute; /*sempre que passar o absolute em cima tem que passar relative ---*/
+   top: 100%;
+   left: 50%;
+   margin-left: -22px;
+   border-left: 22px solid transparent;
+   border-right: 22px solid transparent;
+   border-top: 22px solid #01c0b5;
+ }
+.agencia-itens h2{
+font-weight: normal;
+font-family: 'Oswald', sans-serif;
+font-size: 2rem;
+margin: 25px 0 5px 0;
+text-transform: uppercase;
+   }
+
+   /* CURIOSIDADES
+===========================================================*/
+.curiosidades{
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+    background-image: url(../images/agencia-curiosidades-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;  /* deixar a imagem 100% no bloco da imagem*/
+}
+.curiosidades p{
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+.curiosidades ul{
+    list-style: none;
+
+    font-family:'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+ .curiosidades ul span{
+    font-family:'Oswald', sans-serif;
+    font-size: 3.75rem;
+    color: #01c0b5;
+    display: block; /*Um do lado do outro  o numero e o texto==*/
+  }
+
+/* Equipe
+===========================================================*/
+/* Modal*/
+.dialog-equipe-photo{
+    height: 226px;
+    overflow: hidden; /* Permanecer o Tamanho*/
+    text-align: center; /* Centralizar a Imagem*/
+}
+
+.dialog-equipe-photo img{
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+}
+.dialog-equipe-redes{
+  text-align: center;
+  margin-bottom: 20px;
+ }
+ .dialog-equipe-redes a{
+   color: #2c3e50;
+   font-size: 2rem;
+   margin: 0 10px;
+   }
+ .dialog-equipe-redes a:hover{
+   color: #f47933;
+   }
+
+   .dialog-equipe-habilidades span{
+       float: right;
+   }
+   .dialog-equipe-habilidades li{
+       margin-bottom: 10px;
+   }
+   .dialog-equipe-habilidades li div{
+       background: #eee;
+       height: 13px;
+       position: relative;
+   }
+   .dialog-equipe-habilidades li div span{
+       background: #01c0b5;
+       height: 100%;
+       position: absolute;
+       width: 1%;
+}
+
+   /* Conteudo Começo Equipe*/
+.equipe{
+background: #f5f5f5;
+padding: 50px 0;
+}
+
+.equipe-list{
+    text-align: center;
+    font-size: 0; /*Usei esse codigo aqui pois defini o codigo na fonte em baixo==*/
+}
+.equipe-list li{
+    font-family:'Oswald', sans-serif;
+    text-transform: uppercase;
+    background: #fff;
+    width: 100%;
+    max-width: 322px; /*tamanho da foto da imagem mamis=*/
+    display: inline-block; /*se não passar esse comando ele não aceita o text align*/
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+/*equipe-foto=*/
+.equipe-foto{
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+.equipe-foto img{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.equipe-foto-hover{
+    z-index: 1; /*jogar o bloco dentro da imagem=*/
+position: absolute;
+background: rgba(45,63,81,.85); /*cor transparente=*/
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+/*efeito do bloco de dentro da imagem=*/
+opacity: 0;
+border-radius: 50%;
+-webkit-border-radius: 50%;
+transition: all 300ms ease-in-out;
+-webkit-transition: all 300ms ease-in-out;
+transform: scale(.4) rotate(400deg); /*mudar o bloco rotatorio de dentro da imagem=*/
+ -webkit-transform: scale(.4) rotate(400deg);   
+}
+.equipe-foto-hover div{ /*quando estiver mais DIV tem que colocar o sinal de < =*/
+    position: absolute; /* para ser flutuante=*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    }
+.equipe-foto-hover span{
+    color: #fff;
+    font-size: 1.125rem;
+    position: relative;
+}
+
+.equipe-foto-hover span:before,
+.equipe-foto-hover span:after{ /*barrinha dentro da foto posição direita=*/
+    content: "";
+    background: #fff;
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    top: 50%;
+ 
+}
+.equipe-foto-hover span:before{ /*barrinha  dentro da foto=*/
+    left: -50px;
+  
+}
+ .equipe-foto-hover span:after{ /*barrinha  dentro da foto=*/
+    right: -50px;
+  
+}
+.equipe-foto-hover a{
+    color: #fff;
+    font-size: 0.875rem;
+    background: #f47933;
+    padding: 3px 10x;
+    position: relative;
+    top: 5px;
+  }
+.equipe-foto-hover a:hover{ /*cor barra dentro da imagem=*/
+    background: #ca5818;
+   
+ }
+
+/*equipe-title=*/
+.equipe-title{
+padding: 10px 0;
+position: relative;
+overflow: hidden;
+transition: all 200ms ease-in-out;
+-webkit-transition: all 200ms ease-in-out;
+}
+
+.equipe-title:before{
+    position: absolute;
+    content: "";
+    background: #f47933;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    transition: all 200ms ease-in-out;
+-webkit-transition: all 200ms ease-in-out;
+    }
+.equipe-title strong{
+    font-size: 1.125rem;
+    font-weight: 400;
+    position: relative;   
+   }
+/*equipe hover aparecer a mensagem do fron so quando passar o mouse=*/
+.equipe-list li:hover .equipe-foto-hover{
+    opacity: 1;
+border-radius: 0%;
+-webkit-border-radius: 0%;
+transform: scale(1) rotate(0deg); /*mudar o bloco rotatorio de dentro da imagem=*/
+ -webkit-transform: scale(1) rotate(0deg); 
+}
+
+.equipe-list li:hover .equipe-title:before{
+    top: 0;
+}
+.equipe-list li:hover .equipe-title{
+    color: #fff;
+}
+
+/* SERVIÇOS - Antes do Breakpoints pois a tela vai ser iniciada do menor para o maior
+===========================================================*/
+.servicos{
+    padding: 50px 0; 
+    background-image: url(../images/servicos-bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;  /* deixar a imagem 100% no bloco da imagem*/  
+}
+
+.servicos-item{
+    overflow: hidden; /* se nao usar isso o canto so vai ficar arredondado na imagem na parte de baixo*/  
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;  /* deixar a imagem com o canto arredondado*/  
+    -webkit-border-radius: 5px;
+    box-shadow: 3px 3px 4px rgba(0, 0,0, .3); /* deixar a imagem com sombra*/  
+    -webkit-box-shadow: 3px 3px 4px rgba(0, 0,0, .3);
+}
+
+.servicos-item:not(:first-child){ /* Não pegar o estilo do primeiro ... Ou seja fazer todo menos o primeiro*/  
+    margin-top: 30px;
+}
+
+.servicos-item header{
+    padding: 15px; /* espaçamento*/  
+}
+
+.servicos-item header i{
+    font-size: 3rem;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;  /* deixar a imagem com o canto arredondado*/  
+    -webkit-border-radius: 50%;
+}
+
+.servicos-item header h2{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;  
+}
+
+.servicos-item p {
+    font-size: 0.875rem;
+    margin-top: 10px;  
+}
+
+.servicos-item p strong{
+    font-size: 1.5rem;
+    font-family: 'Oswald' , sans-serif; 
+    text-transform: uppercase; /* deixar texto caixa Alta*/ 
+    font-weight: 400; /* não deixar texto Oferecemos em negrito se aumentar por 500 ele fica*/ 
+}
+
+.servicos-item ul li{
+    font-size: 1.125rem;
+   border-bottom: 2px dotted #ccc;
+   padding: 5px 0;
+}
+
+.servicos-item a{
+    display: inline-block; /* Ajustar o texto para ficar abaixo da Lista*/ 
+    font-size: 0.875rem;
+    color: #fff;
+    text-transform: uppercase; /* deixar texto caixa Alta*/ 
+   padding: 10px 20px;
+   margin: 10px 0;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+}
+
+/* design*/ 
+.servicos-item.design header,
+.servicos-item.design a{ 
+    background: #e04646;
+ }
+
+ .servicos-item.design header i { 
+    color: #e04646;
+ }
+
+ /*estrategia*/ 
+.servicos-item.estrategia header,
+.servicos-item.estrategia a{ 
+    background: #0091cd;
+ }
+
+ .servicos-item.estrategia header i { 
+    color: #0091cd;
+ }
+
+ /*digital*/ 
+.servicos-item.digital header,
+.servicos-item.digital a{ 
+    background: #00ad45;
+ }
+
+ .servicos-item.digital header i { 
+    color: #00ad45;
+ }
+
+ /*marketing*/ 
+.servicos-item.marketing header,
+.servicos-item.marketing a{ 
+    background: #eebb00;
+ }
+
+ .servicos-item.marketing  header i { 
+    color: #eebb00;
+ }
+
+ .servicos-item a:hover{ /* Quando passar o mouse em cima do saiba mais ele ficar com a cor laranja*/ 
+    background: #f47933;
+ }
+
+ /* TESTEMUNHAS - Antes do Breakpoints pois a tela vai ser iniciada do menor para o maior
+===========================================================*/
+.testemunhas{
+    background: #f5f5f5;
+    padding: 50px 0 ;
+}
+.testemunhas-foto{
+    overflow: hidden;/* Imagem dentro do circo */
+    width: 60px;
+     height: 60px;
+     float: left;
+     border-radius: 50%; /* Imagem dentro do circo */
+    -webkit-border-radius: 50%;
+}
+.testemunhas-info{
+  float: right;  
+  width: calc(100% - 70px); /* calculo para espaçamento da foto vai ser o 60 da foto mais os 10 */
+}
+
+.testemunhas-info header{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .testemunhas-info header h2{
+    line-height: 1;
+    font-size: 1.2rem;
+    max-width: 92%;
+    float: left;
+  }
+  .testemunhas-info header h2 span{
+    font-size: 1rem;
+    color: #999;
+    font-weight: 400; /* não deixar texto Oferecemos em negrito se aumentar por 500 ele fica*/ 
+    display: block;
+  }
+  .testemunhas-info header i{
+    font-size: 1rem;
+    color: #999;
+    float: right;
+    top: 3px;
+    position: relative;
+  }
+
+   /* PORTFOLIO - Antes do Breakpoints pois a tela vai ser iniciada do menor para o maior com 100%
+===========================================================*/
+
+.portfolio-nav{
+text-align: center; /* centralizar os todos, websites, sistemas*/
+margin: 10px 0;
+}
+
+.portfolio-nav li{
+    display: inline-block; /* Ficar em linha*/
+    margin: 0 5px 10px 5px;
+    }
+
+    .portfolio-nav li a{
+        color: #2c3e50;
+        font-family: 'Oswald' , sans-serif;
+        font-size: 1.125rem;
+        text-transform: uppercase; /* Deixar texto em caixa alta*/
+        display: block;
+        padding: 2px 10px;
+        border: 2px solid #2c3e50;
+        border-radius: 3px; /* Borda redonda*/
+        -webkit-border-radius: 3px; /* Borda redonda*/
+        }
+
+/* Mudar cor da borda e texto*/
+        .portfolio-nav li a:hover{
+            color: #f47933;
+            border: 2px solid #f47933;
+             }
+             .portfolio-nav li a.active{
+                color: #f47933;
+                border: 2px solid #f47933;
+                 }
+
+                 .portfolio{
+                     float: left; /* Deixar uma imagem abaixo da outra*/
+                     width: 100%;  /* como trabalhamos a cima do breakpoint irei deixar a imagem a 25% pois ela aqui é 100%*/
+                     position: relative;
+                     display: none;
+                    }
+
+                    .portfolio.visible{
+                        display: block;
+                        animation: animaPortfolio .7s ease;
+                        -webkit-animation: animaPortfolio .7s ease;
+                       }
+                   
+                   
+                       /* Fazer Animação*/
+                       @keyframes animaPortfolio{
+                       0%{
+                           transform: scale(.5);
+                           -webkit-transform:(.5);
+                       }
+                       100%{
+                        transform: scale(1);
+                        -webkit-transform:(1); 
+                       }
+
+                       }
+
+                    .portfolio img{
+                        display: block; /* Tirar o espaçamento da imagem*/
+                       }
+
+                 .portfolio-hover{
+                    z-index: 1;
+                     opacity: 0;
+                     position: absolute; /* Bloco Flutuante*/
+                     top: 0;
+                     left: 0;
+                     width: 100%;
+                     height: 100%;
+                     background: rgba(45, 63, 81, .9);
+                     color: #fff;
+                     text-align: center;
+                     transition: all 300ms ease-in-out;  /* Para vim a transição suave*/
+                     -webkit-transition: all 300ms ease-in-out;
+                     box-shadow: 0 0 0 10px rgba(255, 255,255, .8); /*Borda da imagem quando passar o mouse*/
+                 }
+
+                 .portfolio-hover > div{  /* Fazer o stylo para a primeira DIV*/
+                    position: relative; /* Bloco Flutuante*/
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -50%); /* Centralizar o bloco na vertical e na horizontal*/
+                   -webkit-transform: translate(-50% , -50%);
+                }
+
+                 .portfolio-hover strong{
+                     font-family: 'Oswald' sans-serif;
+                     font-size: 1.5rem;
+                     font-weight: 400;
+                     text-transform: uppercase;      
+                }
+
+                .portfolio-hover label{
+                  width: 100%;   
+                  display: inline-block;
+                  margin-bottom: 10px;
+               }
+
+               .portfolio-hover a{
+                font-size: 4rem;
+                color: #fff;
+                line-height: 1;  /* tirar o espaçamento que estava grande*/
+             }
+
+             .portfolio-hover a:hover{
+               color: #f47933;  /* Passar o mouse ficar com a cor*/
+             }
+
+             .portfolio-hover a i{
+              line-height: 1;  /* tirar o espaçamento que estava grande*/
+             }
+
+             /* HOVER quando eu passar o mouse sobre o portifolio que é o bloco principal como passei o opacit de 0 aqui irei passr o 1*/
+             .portfolio:hover .portfolio-hover{
+                 opacity: 1;
+            
+               }
+
+               /* CLIENTES 
+===========================================================*/
+.clientes{
+    background: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.clientes p{
+   font-size: 1.875rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   line-height: 1;
+  
+}
+.clientes ul li{
+    list-style: none;
+    font-size: 5rem;
+    background: #fff;
+    padding: 5px 20px;
+    margin-top: 20px;
+    line-height: 1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+ }
+
+ /* BLOG
+===========================================================*/
+.blog{
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+
+.blog .content{ /* Utilizando o flex box */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blog-item{
+    background: #333;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.blog-item:last-child{
+    margin-bottom: 0;
+}
+.blog-item-thumb{
+    position: relative;
+}
+
+.blog-item-thumb img{
+    display:block;
+}
+
+.blog-item-thumb span{
+    position: absolute;
+    right: 10px;
+    padding: 3px 10px;
+    font-size: 0.6875rem;  /* A fonte era 11px transformando em rem pego o tamanho e divido por 16 */
+}
+
+.blog-item-thumb span:first-child{/* first primeira */
+   color: #01c0b5; 
+   background: rgba(255, 255,255, .9);  /* O rgba é 255, 255,255 e o .9 quer dizer 90% */
+   bottom: 0;
+}
+
+.blog-item-thumb span:nth-child(2){/* nt-child atacar a segunda span da classe principal*/
+    color: #fff; 
+    background: #01c0b5; 
+    top: 100%;
+ }
+
+ .blog-item h2{
+   font-size: 1rem;
+   margin: 10px 0 5px 0;
+   max-width: 88%;
+ }
+
+ .blog-item p{
+    font-size: 0.875rem;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+ .blog-item .blog-link{
+    font-size: 0.875rem;
+    text-align: right;
+  }
+
+  .blog-item .blog-link a{
+    color: #f47933;
+    font-weight: 700;
+  }
+
+  .blog-item .blog-link a:hover{
+    text-decoration: underline;
+  }
+
+    /* CONTATO
+===========================================================*/
+/* Contato informação*/
+.contato-informacao .content,
+.contato-form .content{
+max-width: 800px;
+}
+.contato-informacao{
+background: url(../images/bg_contato.jpg);
+background-attachment: fixed;
+background-position: center center; /*Centralizar a imagem na vertical e Horizontal*/
+background-size: cover; /*Centralizar a imagem 100% dentro do bloco*/
+padding: 10% 0;
+color: #fff;
+font-size: 1.4rem;
+text-align: center;
+}
+
+.contato-informacao span{
+    background: rgba(255, 255,255, .7);
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    margin: 5px auto 0 auto;
+    }
+
+    /* Contato Form*/
+    .contato-form p{
+        text-align: center;
+        margin: 50px 0 20px 0;
+        font-size: 5rem;
+    }
+
+    .contato-form label{
+       float: left;  /* colocar o texto aonde que quero*/
+       width: 100%;
+       margin-bottom: 15px;
+    }
+ /* Agrupei o label input com o label textarea*/
+    .contato-form label input, 
+    .contato-form label textarea{
+        float: left;  /* colocar o texto aonde que quero*/
+        width: 100%;
+        height: 50px;
+        font-size: 1rem;
+        color: #2c3e50;
+        padding: 5px;
+        margin-top: 5px;
+        border: 2px solid #eee;
+     }
+
+     .contato-form label input[type="checkbox"]{
+        height: auto; 
+        width: auto; 
+        margin-right: 5px;
+     }
+
+     .contato-form label textarea{
+        height: 143px;  
+     }
+     .contato-form label:nth-child(3)span{
+        width: 90%; 
+        display: inline-block;
+     }
+
+     .contato-form button{
+        width: 100%; 
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+        background: #f47933;
+        font-size: 2.6rem;
+        line-height: 1;
+     }
+
+     .contato-form button i{
+        line-height: 1;
+        margin-top: 2px;
+     }
+
+     /* FOOTER
+===========================================================*/
+.footer{
+    background: #2c3e50;
+    padding: 20px 0;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.footer .content{
+    max-width: 800px;
+}
+
+.footer-colunas{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-redes a{
+   color: #fff;
+   font-size: 2rem;
+   margin: 0 10px;
+   line-height: 1;
+}
+
+
+/* BREAKPOINTS 959.9
+===========================================================*/
+/* MAX-WIDTH */
+@media (max-width: 959.9px){
+    #nav-toggle, .header-redes{
+        display: block;
+    } 
+
+    /* header */
+    .header{
+        height: 58px;
+    }
+/* carousel_principal */
+   #carousel_principal{
+       height: calc(100% - 58px);
+   }
+
+    /* Header logo */
+    .header-logo{
+        max-width: 180px;
+        width: 60%;
+        padding: 12px 0;
+    }
+
+    /* menu */
+    .header-collapse{
+        overflow-y: auto;
+        position: fixed;
+        background: rgba(45,63,81,.95);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        padding: 15px;
+        top: -100%;
+        left: 0;
+        transition: top .4s ease;
+        -webkit-transition: top .4s ease;
+    }
+    .header-collapse.active{
+        top: 0%;
+    }
+
+    .header-nav{
+        padding: 25px 0;
+        float: none;
+    }
+    .header-nav ul li{
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .header-nav ul li a{
+      color: #fff;
+      font-size: 1.4rem;
+    }
+    
+    /* search */
+    .header-search{
+       max-width: 300px; 
+       margin: 0 auto;
+       float: none;
+    }
+    .header-search input{
+        padding: 15px;
+    }
+}
+
+/* BREAKPOINTS 480
+===========================================================*/
+/* MIN-WIDTH */
+@media (min-width: 480px){
+    /* curiosidades */ 
+.curiosidades ul li{
+    /*list-style: none;*/ 
+    float: left;
+    width: 50%;
+   }
+
+   /* testemunhas*/
+   .testemunhas-foto{
+    width: 100px;
+     height: 100px;
+}
+.testemunhas-info{ 
+  width: calc(100% - 120px); /* calculo para espaçamento da foto vai ser o 60 da foto mais os 10 */
+}
+/* CLIENTES*/
+.clientes ul li{
+    float: left;
+    width: 48%;
+    margin-right: 4%  4% 0 0 ;
+ }
+ .clientes ul li:nth-of-type(2n+0){
+    margin-right: 0%;
+ }
+ /* Contato*/
+ .contato-informacao span{
+   width: 80%;
+    }
+}
+
+/* BREAKPOINTS 667
+===========================================================*/
+ 
+@media (min-width: 667px){
+    /* mobile float  equipe */ 
+    .equipe-list li{
+        width: 50%;
+    }
+.equipe-list li:nth-of-type(2n+0){  /* mobile float  equipe incluir mais perfil */ 
+    border-left: 0;
+   }
+    
+   /* serviços*/
+   .servicos-item:not(:first-child),
+   .servicos-item{
+  width: calc((100% - 4%) / 2);
+  float: left; /* Puxar o bloco um do lado do outro */
+  margin:0 4% 0 0;
+}
+.servicos-item:nth-of-type(2n+0){ /* Quero dizer que a cada 2 ele zero o margin dele ele zera*/
+    margin-right: 0;
+}
+    .servicos-item:nth-of-type(1n+3){ /* Quero dizer que a cada 2 ele zero o margin dele ele zera*/
+        margin-top: 4%;
+}
+
+/* PORTIFOLIO */
+.portfolio{
+   width: calc(100% / 2);
+  
+   }
+/* BLOG */
+   .blog-item{
+    width: 48%;
+   margin: 0;
+   }
+   .blog-item:nth-of-type(1n+3){
+    margin-top: 4%;
+   }
+}
+
+/* BREAKPOINTS 768
+===========================================================*/
+@media (min-width: 768px){
+    /* MODAL DIALOG*/
+    .dialog-body{
+        padding: 0 20px;
+    }
+    .dialog-equipe .dialog-colunas{
+        float: left;
+        width: 40%;
+    }
+    .dialog-equipe .dialog-colunas:last-child{
+        float: right;
+        width: 56%;
+    }
+    
+    /* carousel_principal */ 
+    #carousel_principal .capitulo-imagem{
+     padding: 30px;
+     font-size: 1.6rem;
+    }
+      /* Fonte diferente para mobile e desktop */
+      #carousel_principal .capitulo-imagem strong{
+    font-size: 2.5rem;
+    }
+
+    /* Agencia  passando inovação, experiente e a figura positivo*/
+.agencia-itens{
+ float: left; /* deixar os blocos um do lado do outro */
+width: calc((100% - 4%) /2 );
+margin-right: 4%;
+}
+/*mobile quero dizer que quando for 2n+0 a cada 2 eu zero o layout ---*/
+.agencia-itens:nth-of-type(2n+0){ /*  */
+   margin-right: 0;
+   }
+ /* curiosidade */
+   .curiosidades ul li{
+       list-style: none;
+    width: 25%;  /* curiosidade dividir as 4 colunas uma coluna é 100% */
+  }
+
+  /* CLIENTES*/
+  .clientes ul li:nth-of-type(2n+0), /* Como passeila em cima tenho que agrupar aqui*/
+.clientes ul li{
+    width: calc((100% - 6%) / 3);
+    margin-right: 3%  3% 0 0 ;
+ }
+ .clientes ul li:nth-of-type(3n+0){
+    margin-right: 0%;
+ }
+ /* Contato*/
+    .contato-informacao{
+    font-size: 2rem;
+     }
+
+    .contato-informacao span{
+        width: 500px;
+        font-size: 3.5rem;
+         }
+         .contato-form form div{  /* Coloquei contato form e repeti o form aqui pois senao iria atacar a div content*/
+        float: left;
+        width: 48%;
+         }
+         
+    .contato-form form div:last-child{  /* */
+        float: right;
+            
+             }
+/* FOOTER*/
+    .footer-colunas{
+        margin: 0;
+        width: calc(100% / 3);
+        float: left;
+   }
+   .footer-colunas:first-child{
+        text-align: left;
+   }
+   .footer-colunas:last-child{
+    text-align: right;
+    padding-top: 5px;
+   }
+   .footer-redes a{
+    margin: 0px;
+   }
+   .footer-redes a:not(:first-child){ /*Para não da o espa~çamento no primeiro*/
+    margin-left: 20px;
+ }
+}
+/* BREAKPOINTS 960
+===========================================================*/
+@media (min-width: 960px){
+     /* MODAL DIALOG*/
+    .dialog-portfolio .dialog-colunas{
+        float: left;
+        width: 68%;
+    }
+    .dialog-portfolio .dialog-colunas:last-child{
+        float: right;
+        width: 30%;
+    }
+    /* HEADER */
+    @keyframes animaHeader{
+        0%{
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        }
+    100%{
+        opacity: 1; /* mostrar */
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+    }
+}
+     .fixed{/* Deixar a parte fixa mas utilizar no jquery*/
+    position: fixed;
+    background: #fff;
+    z-index: 20; /* Deixar a cima de tudo*/
+    animation: animaHeader .7s ease-in-out .4s backwards;
+    -webkit-animation: animaHeader .7s ease-in-out .4s backwards;
+}
+    .header-nav{
+       margin-left: 2%; 
+    }
+    .header-nav ul li a.active::before{
+       background: #f47933;
+       content: "";
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        top: -31px;
+        left: 0;
+    }
+
+    /* Agencia */
+    .agencia-itens:nth-of-type(2n+0),  /*comopassei isso na resolução de 768 tenho que repitir aqui e agrupando os dados */
+    .agencia-itens{
+     
+       width: calc((100% - 8%) /3 ); /*Estou dividindo esse calculo por 3 colunas */
+       margin-right: 4%;
+       }
+       
+       .agencia-itens:nth-of-type(3n+0){ /* defini 3 coluna no site inteiro do mobile flou do desktop */
+          margin-right: 0;
+          }
+
+
+          /* mobile float  equipe */ 
+    .equipe-list li:nth-of-type(2n+0),
+    .equipe-list li{
+        width: 25%;
+    }
+   /* .equipe-list li:not(:first-child):nth-of-type(1n+0){
+border-left: 0;
+    }*/
+
+.equipe-list li:not(:first-child){
+        border-left: 0;
+            }
+        }
+
+        /* BREAKPOINTS 1024
+===========================================================*/
+@media (min-width: 1024px){
+    /* HEADER 1024 */
+    .header-nav ul li {
+        margin: 0 6px;
+    }
+
+    /* PORTIFOLIO */
+.portfolio{
+    width: calc(100% / 3);    /* Dividir a imagem em 3 colunas*/
+   
+    }
+} 
+
+/* BREAKPOINTS  1144
+===========================================================*/
+@media (min-width: 1144px){
+    /* HEADER 1144 */
+    .header-logo{
+        width: auto;
+    }
+    .header-nav ul li a {
+      font-size: 1rem;
+    }
+
+     /* CLIENTES*/
+  .clientes ul li:nth-of-type(2n+0), /* Como passeila em cima tenho que agrupar aqui*/
+  .clientes ul li:nth-of-type(3n+0),
+  .clientes ul li{
+      width: calc((100% - 15%) / 6);
+      margin-right: 3%  3% 0 0 ;
+   }
+   .clientes ul li:nth-of-type(6n+0){
+      margin-right: 0%;
+   }
+
+   /* BLOG */
+   .blog-item:nth-of-type(1n+3),
+   .blog-item{
+    width: calc((100% - 9%) /4);
+   margin: 0;
+   
+   }
+}
+
+/* BREAKPOINTS 1280
+===========================================================*/
+@media (min-width: 1280px){
+    /* HEADER 1280 */
+    .header-nav ul li {
+      margin: 0 8px;
+    }
+    .header-search{
+        width: 260px; 
+    }
+
+     /* serviços*/
+     .servicos-item:nth-of-type(2n+0),
+     .servicos-item:nth-of-type(1n+3),
+   .servicos-item{
+  width: calc((100% - 9%) / 4);
+  margin:0 3% 0 0;
+}
+
+/*.servicos-item:nth-of-type(4n+0){ 
+    margin-right: 0;
+}*/
+.servicos-item:last-child{  /* Quero dizer que irei zerar o ultimo Bloco*/
+    margin-right: 0;
+}
+
+/* PORTFOLIO*/
+.portfolio{
+    width: calc(100% / 4);    /* Dividir a imagem em 4 colunas*/
+   
+    }
+}
+
+/* BREAKPOINTS 1366
+===========================================================*/
+@media (min-width: 1366px){
+
+    /* PORTFOLIO*/
+.portfolio{
+    width: calc(100% / 5);    /* Dividir a imagem em 5 colunas*/
+   
+    }
+
+}
+

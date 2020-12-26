@@ -1,0 +1,214 @@
+html, body, p, a, h1, h2{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+
+.color {
+    background: black;
+    grid-area: color
+}
+
+.central {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   
+}
+
+.campo {
+    flex: 1;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+.btn {
+    padding-left: 5px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border-radius: #000000;
+    background: transparent;
+    border: 1px solid black;
+}
+
+.Imput {
+    text-align: center;
+}
+
+imput {
+    border: none;
+}
+
+.select {
+    height: 33px;
+    width: 260px;
+}
+
+
+/* Header */
+.menu-bg {
+    background: #0060EB;
+    height: 150px;
+    
+}
+
+.navbar{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.color-text{
+    color: white;
+}
+
+/* Estilizando as Perguntas*/
+
+p{
+    color: #0060EB;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+
+
+/* Footer */
+
+
+/* Button styles */
+
+.submit-env{
+    padding: 10px 80px;
+    background:  #0060EB;
+    border: none;
+    color: white
+}
+
+.submit-env:hover{
+    padding: 10px 80px;
+    background: green;
+    border: none;
+}
+
+.submit-cancel{
+    border: none;
+    padding: 10px 72px;
+    background: red;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.submit-cancel:hover{
+    border: none;
+    padding: 10px 72px;
+    background: #FF5252;
+    color: white;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 650px){
+    .footer{
+        display: none;
+    }
+
+    .button-aluno{
+        justify-content: center !important;
+
+    }
+    .submit-env-aluno{
+        padding: 10px 80px;
+        background:  #0060EB;
+        border: none;
+        margin-right: 0px !important;
+        color: white;
+        order: -1;
+    }
+    .submit-cancel-aluno{
+        border: none;
+        padding: 10px 72px;
+        background: red;
+        color: white;
+        margin-left: 0px !important;
+    }
+    .input-env {
+        margin: 10px;
+    }
+    .env-aluno{
+        order: -1;
+    }
+}
+
+
+
+/* section one */
+.style-section-one{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.column-flex{
+   
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.column{
+    flex: 0 0 280px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.stylesH2{
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+}
+
+.button-aluno{
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+
+.submit-env-aluno{
+    padding: 10px 80px;
+    background:  #0060EB;
+    border: none;
+    margin-right: 30px;
+    color: white
+}
+
+.submit-env-aluno:hover{
+    padding: 10px 80px;
+    background: green;
+    border: none;
+  
+}
+
+.submit-cancel-aluno{
+    border: none;
+    padding: 10px 72px;
+    background: red;
+    color: white;
+    margin-left: 30px ;
+   
+}
+.submit-cancel-aluno:hover{
+    border: none;
+    padding: 10px 72px;
+    background: #FF5252;
+    color: white;
+
+}
